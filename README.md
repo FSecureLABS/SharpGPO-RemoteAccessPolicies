@@ -49,7 +49,7 @@ C:\Users\IEUser\Desktop>SharpGPO-RemoteAccessPolicies.exe
 
 ## License ##
 
-The cookbook is released under a 3-clause BSD License and maintained by [MWR Info-Security](https://mwrinfosecurity.com/). See the `LICENSE` file for details.
+The tool is released under a 3-clause BSD License and maintained by [MWR Info-Security](https://mwrinfosecurity.com/). See the `LICENSE` file for details.
 
 ## Contact ##
 
