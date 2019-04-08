@@ -41,7 +41,7 @@ C:\Users\IEUser\Desktop>SharpGPO-RemoteAccessPolicies.exe
 
 
 [+] EnableLUA:                          WIN10.skipper.loc WIN7.skipper.loc
-[+] FilterAdministratorToken:           WIN10.skipper.loc BWIN7.skipper.loc
+[+] FilterAdministratorToken:           WIN10.skipper.loc WIN7.skipper.loc
 [+] LocalAccountTokenFilterPolicy:      WIN10.skipper.loc WIN7.skipper.loc
 [+] SeDenyNetworkLogonRight:            WIN10.skipper.loc WIN7.skipper.loc
 [+] SeDenyRemoteInteractiveLogonRight:  WIN10.skipper.loc WIN7.skipper.loc
