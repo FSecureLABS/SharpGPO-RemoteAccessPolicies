@@ -47,6 +47,10 @@ C:\Users\IEUser\Desktop>SharpGPO-RemoteAccessPolicies.exe
 [+] SeDenyRemoteInteractiveLogonRight:  WIN10.skipper.loc WIN7.skipper.loc
 ```
 
+## License ##
+
+The cookbook is released under a 3-clause BSD License and maintained by [MWR Info-Security](https://mwrinfosecurity.com/). See the `LICENSE` file for details.
+
 ## Contact ##
 
 Please submit any bugs on the Github project page or give me a shout on twitter [@den_n1s](https://twitter.com/den_n1s)
