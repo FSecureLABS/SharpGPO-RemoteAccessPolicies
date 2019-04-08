@@ -1,0 +1,8 @@
+C:\Users\DenisPanagiotopoulos\source\repos\panagioto\SharpGPO-RemoteAccessPolicies\SharpGPO-RemoteAccessPolicies\bin\Debug\SharpGPO-RemoteAccessPolicies.exe
+C:\Users\DenisPanagiotopoulos\source\repos\panagioto\SharpGPO-RemoteAccessPolicies\SharpGPO-RemoteAccessPolicies\bin\Debug\SharpGPO-RemoteAccessPolicies.pdb
+C:\Users\DenisPanagiotopoulos\source\repos\panagioto\SharpGPO-RemoteAccessPolicies\SharpGPO-RemoteAccessPolicies\bin\Debug\CommandLine.dll
+C:\Users\DenisPanagiotopoulos\source\repos\panagioto\SharpGPO-RemoteAccessPolicies\SharpGPO-RemoteAccessPolicies\bin\Debug\CommandLine.xml
+C:\Users\DenisPanagiotopoulos\source\repos\panagioto\SharpGPO-RemoteAccessPolicies\SharpGPO-RemoteAccessPolicies\obj\Debug\SharpGPO-RemoteAccessPolicies.csprojResolveAssemblyReference.cache
+C:\Users\DenisPanagiotopoulos\source\repos\panagioto\SharpGPO-RemoteAccessPolicies\SharpGPO-RemoteAccessPolicies\obj\Debug\SharpGPO-RemoteAccessPolicies.exe
+C:\Users\DenisPanagiotopoulos\source\repos\panagioto\SharpGPO-RemoteAccessPolicies\SharpGPO-RemoteAccessPolicies\obj\Debug\SharpGPO-RemoteAccessPolicies.pdb
+C:\Users\DenisPanagiotopoulos\source\repos\panagioto\SharpGPO-RemoteAccessPolicies\SharpGPO-RemoteAccessPolicies\bin\Debug\SharpGPO-RemoteAccessPolicies.exe.config

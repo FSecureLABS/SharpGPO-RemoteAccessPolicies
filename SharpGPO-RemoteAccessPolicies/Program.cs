@@ -52,7 +52,7 @@ namespace SharpGPO_RemoteAccessPolicies
 
             if (File.Exists(GptTmplPath))
             {
-                foreach (string line in File.ReadLines(GptTmplPath, Encoding.UTF8))
+                foreach (string line in File.ReadAllLines(GptTmplPath, Encoding.UTF8))
                 {
                     string EnableLUAConfiguration = @"MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\EnableLUA=4,0";
                     if (line.Equals(EnableLUAConfiguration))
@@ -70,7 +70,7 @@ namespace SharpGPO_RemoteAccessPolicies
 
             if (File.Exists(GptTmplPath))
             {
-                foreach (string line in File.ReadLines(GptTmplPath, Encoding.UTF8))
+                foreach (string line in File.ReadAllLines(GptTmplPath, Encoding.UTF8))
                 {
                     string FilterAdministratorTokenConfiguration = @"MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\FilterAdministratorToken=4,0";
                     if (line.Equals(FilterAdministratorTokenConfiguration))
@@ -88,7 +88,7 @@ namespace SharpGPO_RemoteAccessPolicies
 
             if (File.Exists(RegistryXMLpath))
             {
-                foreach (string line in File.ReadLines(RegistryXMLpath, Encoding.UTF8))
+                foreach (string line in File.ReadAllLines(RegistryXMLpath, Encoding.UTF8))
                 {
                     string LocalAccountTokenFilterPolicyConfiguration = "name=\"LocalAccountTokenFilterPolicy\" type=\"REG_DWORD\" value=\"00000001\"";
                     if (line.Contains(LocalAccountTokenFilterPolicyConfiguration))
@@ -106,7 +106,7 @@ namespace SharpGPO_RemoteAccessPolicies
 
             if (File.Exists(GptTmplPath))
             {
-                foreach (string line in File.ReadLines(GptTmplPath, Encoding.UTF8))
+                foreach (string line in File.ReadAllLines(GptTmplPath, Encoding.UTF8))
                 {
                     string SeDenyNetworkLogonRightConfiguration = @"SeDenyNetworkLogonRight = *S-1-5-32-544";
                     if (line.Contains(SeDenyNetworkLogonRightConfiguration))
@@ -125,7 +125,7 @@ namespace SharpGPO_RemoteAccessPolicies
 
             if (File.Exists(GptTmplPath))
             {
-                foreach (string line in File.ReadLines(GptTmplPath, Encoding.UTF8))
+                foreach (string line in File.ReadAllLines(GptTmplPath, Encoding.UTF8))
                 {
                     string SeDenyRemoteInteractiveLogonRightConfiguration = @"SeDenyRemoteInteractiveLogonRight = *S-1-5-32-544";
                     if (line.Contains(SeDenyRemoteInteractiveLogonRightConfiguration))
