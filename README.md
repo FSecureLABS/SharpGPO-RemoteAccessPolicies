@@ -40,11 +40,11 @@ C:\Users\IEUser\Desktop>SharpGPO-RemoteAccessPolicies.exe
 [-] Domain is: skipper.loc
 
 
-[+] EnableLUA:                          WIN10.skipper.loc WIN7.skipper.loc
-[+] FilterAdministratorToken:           WIN10.skipper.loc WIN7.skipper.loc
-[+] LocalAccountTokenFilterPolicy:      WIN10.skipper.loc WIN7.skipper.loc
-[+] SeDenyNetworkLogonRight:            WIN10.skipper.loc WIN7.skipper.loc
-[+] SeDenyRemoteInteractiveLogonRight:  WIN10.skipper.loc WIN7.skipper.loc
+[+] EnableLUA:                          WIN10.skipper.loc
+[+] FilterAdministratorToken:           WIN10.skipper.loc
+[+] LocalAccountTokenFilterPolicy:      WIN10.skipper.loc
+[+] SeDenyNetworkLogonRight:            WIN7.skipper.loc
+[+] SeDenyRemoteInteractiveLogonRight:  WIN7.skipper.loc
 ```
 
 ## License ##
