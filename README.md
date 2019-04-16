@@ -11,23 +11,23 @@ CommandLineParser has been used in order to parse the command line arguments. Th
 
 ## Usage ##
 
-#### `--domain`
+#### `--Domain`
 
 Specifies an Active Directory server (domain controller) to bind to
 
-#### `--domainController`
+#### `--DomainController`
 
 Specifies an Active Directory server (domain controller) to bind to
 
-#### `--searchScope`
+#### `--SearchScope`
 
 Specifies the scope to search under, Base/OneLevel/Subtree (default of Subtree)
 
-#### `--searchBase`
+#### `--SearchBase`
 
 The LDAP source to search through, e.g. SharpGPO-RemoteAccessPolicies --searchBase /OU=Workstations,DC=domain,DC=local. Useful for OU queries.
 
-#### `--verbose`
+#### `--Verbose`
 
 Print more information about GPOs
 
