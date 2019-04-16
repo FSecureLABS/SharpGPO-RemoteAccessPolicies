@@ -139,22 +139,22 @@ namespace SharpGPO_RemoteAccessPolicies
 
         public class Options
         {
-            [Option("", "domain", Required = false, HelpText = "Set the target domain.")]
+            [Option("", "Domain", Required = false, HelpText = "Set the target domain, defaults to the current domain")]
             public string domain { get; set; }
 
-            [Option("", "searchScope", Required = false, HelpText = "Specifies the scope to search under, Base/OneLevel/Subtree (default of Subtree).")]
+            [Option("", "SearchScope", Required = false, HelpText = "Specifies the scope to search under, Base/OneLevel/Subtree (default of Subtree).")]
             public string searchScope { get; set; }
             
-            [Option("", "domainController", Required = false, HelpText = "Specifies an Active Directory server (domain controller) to bind to.")]
+            [Option("", "DomainController", Required = false, HelpText = "Specifies an Active Directory server (domain controller) to bind to.")]
             public string domainController { get; set; }
             
-            [Option("", "verbose", Required = false, HelpText = "Print more information about GPOs.")]
+            [Option("", "Verbose", Required = false, HelpText = "Print more information about GPOs.")]
             public bool verbose { get; set; }
             
-            [Option("", "searchBase", Required = false, HelpText = "The LDAP source to search through, e.g. SharpGPO-RemoteAccessPolicies --searchBase /OU=Workstations,DC=domain,DC=local. Useful for OU queries.")]
+            [Option("", "SearchBase", Required = false, HelpText = "The LDAP source to search through, e.g. SharpGPO-RemoteAccessPolicies --searchBase /OU=Workstations,DC=domain,DC=local. Useful for OU queries.")]
             public string searchBase { get; set; }
 
-            [Option("", "help", Required = false, HelpText = "Display help menu.")]
+            [Option("h", "Help", Required = false, HelpText = "Display help menu.")]
             public bool help { get; set; }
 
 
@@ -162,11 +162,6 @@ namespace SharpGPO_RemoteAccessPolicies
 
         static void Main(string[] args)
         {
-            if (args == null)
-            {
-                PrintHelp();
-                return;
-            }
 
             string domain = "";
             string domainController = "";
@@ -243,7 +238,7 @@ namespace SharpGPO_RemoteAccessPolicies
                 {
                     current_domain = System.DirectoryServices.ActiveDirectory.Domain.GetDomain(domainContext);
                 }
-                catch (Exception)
+                catch
                 {
                     Console.WriteLine("\n[!] The specified domain does not exist or cannot be contacted. Exiting...\n");
                     return;
@@ -290,7 +285,16 @@ namespace SharpGPO_RemoteAccessPolicies
             connection = new System.DirectoryServices.Protocols.LdapConnection(identifier);
             connection.SessionOptions.Sealing = true;
             connection.SessionOptions.Signing = true;
-            connection.Bind();
+
+            try
+            {
+                connection.Bind();
+            }
+            catch
+            {
+                Console.WriteLine("The domain controller cannot be contacted. Exiting...\n");
+                return;
+            }
 
             SearchRequest requestGUID = null;
             
@@ -312,7 +316,7 @@ namespace SharpGPO_RemoteAccessPolicies
             {
                 responseGUID = (System.DirectoryServices.Protocols.SearchResponse)connection.SendRequest(requestGUID);
             }
-            catch (Exception)
+            catch
             {
                 Console.WriteLine("\n[!] Search scope is not valid. Exiting...\n");
                 return;
@@ -341,11 +345,8 @@ namespace SharpGPO_RemoteAccessPolicies
                         try
                         {
                             string displayName = entry.Attributes["displayName"][0].ToString();
-                            //Console.WriteLine("[+] displayName is: {0}", displayName);
                             string name = entry.Attributes["name"][0].ToString();
-                            //Console.WriteLine("[+] name is: {0}", name);
                             string gpcfilesyspath = entry.Attributes["gpcfilesyspath"][0].ToString();
-                            //Console.WriteLine("[+] gpcfilesyspath is: {0}\n", gpcfilesyspath);
 
                             string uncPathGptTmpl = gpcfilesyspath + @"\Machine\Microsoft\Windows NT\SecEdit\GptTmpl.inf";
 
