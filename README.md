@@ -3,7 +3,7 @@ A C# tool for enumerating remote access policies through group policy.
 
 ## Compile Instructions ## 
 
-SharpExchangePriv has been built against .NET 3.5 and is compatible with Visual Studio 2015/2017. Simply open the solution file and build the project.
+SharpGPO-RemoteAccessPolicies has been built against .NET 3.5 and is compatible with Visual Studio 2015/2017. Simply open the solution file and build the project.
 
 CommandLineParser has been used in order to parse the command line arguments. This will create the `CommandLine.dll` file, along with the executable. You can simple merge the .exe and the .dll into one executable file:
 
